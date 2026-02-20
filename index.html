@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Grocery Store - Quality Groceries Delivered</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="#home"><h1>🛒 Fresh Grocery Store</h1></a>
+                </div>
+                
+                <nav class="header__nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#categories" class="nav-link">Categories</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                
+                <div class="header__actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search for products...">
+                        <button class="search-btn" id="searchBtn">🔍</button>
+                    </div>
+                    
+                    <button class="cart-btn" id="cartBtn">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero__content">
+                <h2 class="hero__title">Fresh Groceries Delivered to Your Door</h2>
+                <p class="hero__subtitle">Quality products, unbeatable prices, and convenient delivery. Shop the freshest groceries from local farms and trusted suppliers.</p>
+                <button class="btn btn--primary btn--lg hero__cta" id="browseBtn">Browse Products</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories__grid" id="categoriesGrid">
+                <!-- Categories will be rendered by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <div class="products__header">
+                <h2 class="section-title">Our Products</h2>
+                <div class="products__filters">
+                    <button class="filter-btn active" data-category="all">All Products</button>
+                    <button class="filter-btn" data-category="fruits">Fruits & Vegetables</button>
+                    <button class="filter-btn" data-category="dairy">Dairy</button>
+                    <button class="filter-btn" data-category="meat">Meat & Seafood</button>
+                    <button class="filter-btn" data-category="bakery">Bakery</button>
+                    <button class="filter-btn" data-category="beverages">Beverages</button>
+                    <button class="filter-btn" data-category="snacks">Snacks</button>
+                </div>
+            </div>
+            
+            <div class="products__grid" id="productsGrid">
+                <!-- Products will be rendered by JavaScript -->
+            </div>
+            
+            <div class="no-results hidden" id="noResults">
+                <p>No products found matching your search.</p>
+                <button class="btn btn--secondary" id="clearSearch">Clear Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal hidden" id="cartModal">
+        <div class="cart-modal__overlay" id="cartOverlay"></div>
+        <div class="cart-modal__content">
+            <div class="cart-modal__header">
+                <h3>Your Shopping Cart</h3>
+                <button class="cart-modal__close" id="closeCart">✕</button>
+            </div>
+            
+            <div class="cart-modal__body">
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be rendered by JavaScript -->
+                </div>
+                
+                <div class="cart-empty hidden" id="cartEmpty">
+                    <p>Your cart is empty</p>
+                    <button class="btn btn--secondary" id="continueShopping">Continue Shopping</button>
+                </div>
+            </div>
+            
+            <div class="cart-modal__footer">
+                <div class="cart-total">
+                    <strong>Total: $<span id="cartTotal">0.00</span></strong>
+                </div>
+                <button class="btn btn--primary btn--full-width" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>Fresh Grocery Store</h4>
+                    <p>Your trusted partner for fresh, quality groceries delivered right to your doorstep.</p>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Contact Info</h4>
+                    <p>📞 (555) 123-4567</p>
+                    <p>📧 hello@freshgrocery.com</p>
+                    <p>📍 123 Fresh Market St, City, State 12345</p>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 Fresh Grocery Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
