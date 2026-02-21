@@ -45,7 +45,7 @@ fresh-grocery-store/
 
 ## 🌐 Live Demo
 
-(Enable GitHub Pages and add link here)
+https://fresh-grocery-store-one.vercel.app/
 
 ---
 
